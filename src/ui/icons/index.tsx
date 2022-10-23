@@ -1,3 +1,4 @@
+export * from './add-button';
 export * from './arrow-right';
 export * from './feed';
 export * from './github';

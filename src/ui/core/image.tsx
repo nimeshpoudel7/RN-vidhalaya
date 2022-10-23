@@ -9,11 +9,17 @@ export type ImgProps = FastImageProps & {
 };
 
 export const Image = ({ source, style, className, ...props }: ImgProps) => {
+  console.log(source);
+
   return (
     <SFastImage
       source={
         Object.prototype.hasOwnProperty.call(source, 'uri')
-          ? { ...(source as Source), cache: FastImage.cacheControl.immutable }
+          ? {
+              ...(source as Source),
+              priority: FastImage.priority.high,
+              cache: FastImage.cacheControl.immutable,
+            }
           : source
       }
       className={className}

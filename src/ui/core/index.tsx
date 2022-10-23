@@ -2,6 +2,7 @@ export * from './activity-indicator';
 export * from './button';
 export * from './image';
 export * from './input';
+export * from './linear';
 export * from './list';
 export * from './pressable';
 export * from './scroll-view';

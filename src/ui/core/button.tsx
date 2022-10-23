@@ -1,5 +1,6 @@
 import React from 'react';
 import type { TouchableOpacityProps } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import { ActivityIndicator } from './activity-indicator';
 import { Text } from './text';
@@ -43,6 +44,7 @@ interface Props extends TouchableOpacityProps {
   variant?: VariantName;
   label?: string;
   loading?: boolean;
+  isLinearButton?: boolean;
 }
 
 export const Button = ({
@@ -50,35 +52,80 @@ export const Button = ({
   loading = false,
   variant = 'primary',
   disabled = false,
+  isLinearButton = false,
   ...props
 }: Props) => {
   return (
     <TouchableOpacity
       {...props}
       disabled={disabled || loading}
-      className={`
+      className={
+        !isLinearButton
+          ? `
     ${buttonVariants.defaults.container}
      ${buttonVariants[variant].container}
      ${disabled ? 'opacity-50' : ''}
-    `}
+    `
+          : ''
+      }
     >
-      {loading ? (
-        <ActivityIndicator
-          size="small"
+      {isLinearButton ? (
+        <LinearGradient
+          colors={['#888BF4', '#5151C6']}
+          start={{ x: 1, y: 0 }}
+          end={{ x: 0, y: 0 }}
           className={`
+                    ${buttonVariants.defaults.indicator}
+
+                    `}
+          style={{
+            width: '100%',
+            height: 50,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 30,
+          }}
+        >
+          {loading ? (
+            <ActivityIndicator
+              size="small"
+              className={`
           ${buttonVariants.defaults.indicator}
            ${buttonVariants[variant].indicator}
           `}
-        />
-      ) : (
-        <Text
-          className={`
+            />
+          ) : (
+            <Text
+              className={`
           ${buttonVariants.defaults.label}
            ${buttonVariants[variant].label}
           `}
-        >
-          {label}
-        </Text>
+            >
+              {label}
+            </Text>
+          )}
+        </LinearGradient>
+      ) : (
+        <>
+          {loading ? (
+            <ActivityIndicator
+              size="small"
+              className={`
+          ${buttonVariants.defaults.indicator}
+           ${buttonVariants[variant].indicator}
+          `}
+            />
+          ) : (
+            <Text
+              className={`
+          ${buttonVariants.defaults.label}
+           ${buttonVariants[variant].label}
+          `}
+            >
+              {label}
+            </Text>
+          )}
+        </>
       )}
     </TouchableOpacity>
   );
