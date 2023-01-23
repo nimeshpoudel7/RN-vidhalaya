@@ -2099,17 +2099,17 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@tanstack/query-core@4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.3.4.tgz#b93da17232fda91ec08ef14d2ca1d8326fc599f2"
-  integrity sha512-NLAe3j5Vk1yYEtoPP5fPGPjRzkZPx67KUM3f14L3InziJZJ0wVecCh7uKfgYkbRKJSeq6PlbND7iuCGdTplN6Q==
+"@tanstack/query-core@4.22.4":
+  version "4.22.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.22.4.tgz#aca622d2f8800a147ece5520d956a076ab92f0ea"
+  integrity sha512-t79CMwlbBnj+yL82tEcmRN93bL4U3pae2ota4t5NN2z3cIeWw74pzdWrKRwOfTvLcd+b30tC+ciDlfYOKFPGUw==
 
-"@tanstack/react-query@^4.3.4":
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.3.4.tgz#91a4232a967de04a0662d63d53b18ecc3e11c7e2"
-  integrity sha512-IiAo+B8bxphEpO7xwLQaCptd2rY4Ef3pW1q9J3pT66G+J/st4QpGQ+cSm9iESp9ccRy1YNUk3klk/hQtWewl6g==
+"@tanstack/react-query@^4.22.4":
+  version "4.22.4"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.22.4.tgz#851581c645f1c9cfcd394448fedd980a39bbc3fe"
+  integrity sha512-e5j5Z88XUQGeEPMyz5XF1V0mMf6Da+6URXiTpZfUb9nuHs2nlNoA+EoIvnhccE5b9YT6Yg7kARhn2L7u94M/4A==
   dependencies:
-    "@tanstack/query-core" "4.3.4"
+    "@tanstack/query-core" "4.22.4"
     use-sync-external-store "^1.2.0"
 
 "@tsconfig/node10@^1.0.7":
